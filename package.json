@@ -5,6 +5,7 @@
   "main": "content.js",
   "scripts": {
     "compile": "webpack ./src/index.js ./index.js",
+    "clean": "./scripts/clean.sh",
     "start": "yarn compile --watch",
     "build": "./scripts/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
