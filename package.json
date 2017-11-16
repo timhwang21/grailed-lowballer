@@ -1,0 +1,23 @@
+{
+  "name": "grailed-lowballer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "content.js",
+  "scripts": {
+    "start": "webpack --watch ./src/index.js ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/timhwang21/grailed-lowballer.git"
+  },
+  "author": "Tim Hwang <timhwang21@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timhwang21/grailed-lowballer/issues"
+  },
+  "homepage": "https://github.com/timhwang21/grailed-lowballer#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
