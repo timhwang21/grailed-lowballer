@@ -4,6 +4,10 @@ const blacklist = [
   'marquee-wrapper',
 ];
 
-export default () => blacklist
-  .reduce((nodes, klass) => nodes.concat([...document.getElementsByClassName(klass)]), [])
-  .forEach(node => node.style.display = 'none');
+export default () => {
+  const homeNode = document.getElementById('homepage');
+
+  blacklist
+    .reduce((nodes, klass) => nodes.concat([...homeNode.getElementsByClassName(klass)]), [])
+    .forEach(node => node.style.display = 'none');
+}
