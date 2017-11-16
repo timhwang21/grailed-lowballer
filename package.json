@@ -1,10 +1,10 @@
 {
   "name": "grailed-lowballer",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "content.js",
   "scripts": {
-    "compile": "webpack ./src/index.js ./build/index.js",
+    "compile": "webpack ./src/index.js ./index.js",
     "start": "yarn compile --watch",
     "build": "./scripts/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
