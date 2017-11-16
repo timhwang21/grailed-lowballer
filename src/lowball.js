@@ -16,7 +16,10 @@ export default () => {
 
   offerButton.innerText = 'Lowball by 60%';
   offerButton.onclick = () => setTimeout(() => {
-    document.getElementById('offer').value *= .6;
-    document.getElementById('message').innerText = messages[Math.floor(Math.random()*messages.length)];
+    const offerInput = document.getElementById('offer');
+    const messageInput = document.getElementById('message');
+
+    offerInput.value = (offerInput.value * .6).toFixed(2);
+    messageInput.innerText = messages[Math.floor(Math.random() * messages.length)];
   }, 0);
 }
