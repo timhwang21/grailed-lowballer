@@ -4,7 +4,9 @@
   "description": "",
   "main": "content.js",
   "scripts": {
-    "start": "webpack --watch ./src/index.js ./build/index.js",
+    "compile": "webpack ./src/index.js ./build/index.js",
+    "start": "yarn compile --watch",
+    "build": "./scripts/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
