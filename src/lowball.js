@@ -15,11 +15,13 @@ export default () => {
   }
 
   offerButton.innerText = 'Lowball by 60%';
-  offerButton.onclick = () => setTimeout(() => {
-    const offerInput = document.getElementById('offer');
-    const messageInput = document.getElementById('message');
+  offerButton.onclick = () =>
+    setTimeout(() => {
+      const offerInput = document.getElementById('offer');
+      const messageInput = document.getElementById('message');
 
-    offerInput.value = (offerInput.value * .6).toFixed(2);
-    messageInput.innerText = messages[Math.floor(Math.random() * messages.length)];
-  }, 0);
-}
+      offerInput.value = (offerInput.value * 0.6).toFixed(2);
+      messageInput.innerText =
+        messages[Math.floor(Math.random() * messages.length)];
+    }, 0);
+};

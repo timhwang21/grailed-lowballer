@@ -4,11 +4,16 @@
   "description": "",
   "main": "content.js",
   "scripts": {
-    "compile": "webpack ./src/index.js ./index.js",
-    "clean": "./scripts/clean.sh",
-    "start": "yarn compile --watch",
     "build": "./scripts/build.sh",
+    "clean": "./scripts/clean.sh",
+    "compile": "webpack ./src/index.js ./index.js",
+    "precommit": "lint-staged",
+    "prettier": "prettier --single-quote --trailing-comma all --no-config --write \"src/**/*.js\"",
+    "start": "yarn compile --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.js": ["yarn prettier", "git add"]
   },
   "repository": {
     "type": "git",
@@ -21,6 +26,9 @@
   },
   "homepage": "https://github.com/timhwang21/grailed-lowballer#readme",
   "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
     "webpack": "^3.8.1"
   }
 }
