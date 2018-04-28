@@ -1,5 +1,3 @@
-import { isIndex } from './locations';
-
 const blacklist = [
   'dry-clean-only-preview-wrapper',
   'marquee',
@@ -8,10 +6,6 @@ const blacklist = [
 ];
 
 export default () => {
-  if (!isIndex()) {
-    return;
-  }
-
   const homeNode = document.getElementById('homepage');
 
   blacklist

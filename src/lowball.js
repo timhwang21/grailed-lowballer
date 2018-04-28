@@ -1,5 +1,3 @@
-import { isListing } from './locations';
-
 const messages = [
   'measurements?',
   'paypal ready',
@@ -10,10 +8,6 @@ const messages = [
 ];
 
 export default () => {
-  if (!isListing()) {
-    return;
-  }
-
   const offerButton = document.getElementsByClassName('makeoffer')[0];
 
   if (!offerButton) {
