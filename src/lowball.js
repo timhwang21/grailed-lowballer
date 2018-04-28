@@ -19,9 +19,14 @@ export default () => {
     setTimeout(() => {
       const offerInput = document.getElementById('offer');
       const messageInput = document.getElementById('message');
+      const submitButtonWrapper = document.getElementsByClassName('submit');
+      const submitButton = submitButtonWrapper
+        ? submitButtonWrapper[0].firstChild
+        : null;
 
-      offerInput.value = (offerInput.value * 0.6).toFixed(2);
+      offerInput.value = Math.ceil(offerInput.value * 0.6);
       messageInput.innerText =
         messages[Math.floor(Math.random() * messages.length)];
+      submitButton && submitButton.focus();
     }, 0);
 };
