@@ -1,10 +1,17 @@
+import { isIndex } from './locations';
+
 const blacklist = [
   'dry-clean-only-preview-wrapper',
   'marquee',
   'marquee-wrapper',
+  'HomepageHero',
 ];
 
 export default () => {
+  if (!isIndex()) {
+    return;
+  }
+
   const homeNode = document.getElementById('homepage');
 
   blacklist
