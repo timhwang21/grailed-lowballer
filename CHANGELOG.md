@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.7
+* REALLY fix broken build (wrong path in `manifest.json`)
+
 ## 1.0.6
 * Fix broken build (uploaded incorrect bundle to Chrome store)
 

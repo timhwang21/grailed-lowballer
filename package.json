@@ -1,11 +1,10 @@
 {
   "name": "grailed-lowballer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
-  "main": "dist/content.bundle.js",
+  "main": "content.bundle.js",
   "scripts": {
     "build": "./scripts/build.sh",
-    "clean": "./scripts/clean.sh",
     "precommit": "lint-staged",
     "prettier": "prettier --single-quote --trailing-comma all --no-config --write \"src/**/*.js\"",
     "start": "webpack --watch",
