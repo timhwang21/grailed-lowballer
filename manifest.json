@@ -1,15 +1,24 @@
 {
   "name": "Grailed Lowballer",
   "description": "Think the 10% button is good? Think again.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "manifest_version": 2,
+  "background": {
+    "scripts": ["dist/background.bundle.js"],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "matches": [
         "*://www.grailed.com/*"
       ],
-      "js": ["index.js"]
+      "js": ["dist/content.bundle.js"]
     }
+  ],
+  "permissions": [
+    "cookies",
+    "storage",
+    "*://www.grailed.com/*"
   ],
   "icons": {
     "16": "static/icon16.jpg",

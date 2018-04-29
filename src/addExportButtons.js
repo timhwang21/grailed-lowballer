@@ -12,10 +12,21 @@ const createButton = innerText => {
   return btn;
 };
 
+// Buyer and seller pages have different DOM structure
+const getButtonContainer = () =>
+  document.getElementsByClassName('listing-cta buyer')[0] ||
+  document.getElementById('listing-show-cta');
+
 export default async () => {
   const currentListing = await fetchListing(getCurrentListingID());
 
   if (!currentListing) {
+    return;
+  }
+
+  const btnContainer = getButtonContainer();
+
+  if (!btnContainer) {
     return;
   }
 
@@ -25,10 +36,6 @@ export default async () => {
   exportTextBtn.onclick = () => exportText(currentListing);
   exportJsonBtn.onclick = () => exportJson(currentListing);
 
-  document
-    .getElementById('price-drop-form')
-    .parentNode.appendChild(exportTextBtn);
-  document
-    .getElementById('price-drop-form')
-    .parentNode.appendChild(exportJsonBtn);
+  btnContainer.appendChild(exportTextBtn);
+  btnContainer.appendChild(exportJsonBtn);
 };

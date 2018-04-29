@@ -2,14 +2,13 @@
   "name": "grailed-lowballer",
   "version": "1.0.4",
   "description": "",
-  "main": "content.js",
+  "main": "dist/content.bundle.js",
   "scripts": {
     "build": "./scripts/build.sh",
     "clean": "./scripts/clean.sh",
-    "compile": "webpack ./src/index.js ./index.js",
     "precommit": "lint-staged",
     "prettier": "prettier --single-quote --trailing-comma all --no-config --write \"src/**/*.js\"",
-    "start": "yarn compile --watch",
+    "start": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
@@ -29,10 +28,18 @@
   },
   "homepage": "https://github.com/timhwang21/grailed-lowballer#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^4.19.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
+    "path": "^0.12.7",
     "prettier": "^1.12.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^3.8.1"
-  }
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  },
+  "dependencies": {}
 }

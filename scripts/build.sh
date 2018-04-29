@@ -1,4 +1,4 @@
-yarn compile
+webpack
 mkdir build
 mv index.js build/index.js
 cp manifest.json build/manifest.json
