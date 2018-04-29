@@ -1,7 +1,5 @@
 .DS_Store
 node_modules/
 dist/
-build/
-build.zip
-/index.js
+dist.zip
 yarn-error.log

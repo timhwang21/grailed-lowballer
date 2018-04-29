@@ -1,8 +1,6 @@
 webpack
-mkdir build
-mv index.js build/index.js
-cp manifest.json build/manifest.json
-cp -R static build/static
-zip -r -X build build
-rm -rf build
+cp manifest.json dist/manifest.json
+cp -R static dist/static
+zip -r -X dist dist
+rm -rf dist
 echo "Build complete."
