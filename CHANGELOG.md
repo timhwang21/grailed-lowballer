@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.6
+* Fix broken build (uploaded incorrect bundle to Chrome store)
+
 ## 1.0.5
 * Expose export for all items
 * Some backend refactoring for future extensibility
