@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.5
+* Expose export for all items
+* Some backend refactoring for future extensibility
+
 ## 1.0.4
 * Hide hero banner from homepage
 * Feature: export own items as plaintext or JSON
