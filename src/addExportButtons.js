@@ -7,7 +7,7 @@ const getCurrentListingID = () =>
 const createButton = innerText => {
   const btn = document.createElement('a');
   btn.innerText = innerText;
-  btn.className = 'button white';
+  btn.className = 'button _large';
 
   return btn;
 };

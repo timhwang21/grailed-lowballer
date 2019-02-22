@@ -1,3 +1,4 @@
+rm -rf dist
 webpack
 mkdir dist
 mv background.bundle.js dist/background.bundle.js
